@@ -24,9 +24,11 @@ public class Reader
 	{
 		if(At==null)
 		{
+			GameValues.Proceed=false;
 			return;
 		}
 		
+		GameValues.Proceed=true;
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
         DocumentBuilder db = dbf.newDocumentBuilder();

@@ -72,8 +72,11 @@ public class Game
 		JFileChooser JFC=new JFileChooser();
 		JFC.setDialogType(JFileChooser.OPEN_DIALOG);
 		JFC.showOpenDialog(LobbyWindow);
-	//	Reader.Read(JFC.getSelectedFile());
-		Reader.Read(new File("C:\\Users\\also me\\source\\eclipse-workspace\\jeopardy\\src\\jeopardy\\readWrite\\macros\\Macro.xml"));
+		Reader.Read(JFC.getSelectedFile());
+		if (!GameValues.Proceed)
+		{
+			return;
+		}
 		
 		//initialize and set up BoardWindow
 		BoardWindow=new JFrame();
